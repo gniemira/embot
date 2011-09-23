@@ -66,7 +66,7 @@ module Embot
 
     # Determine if message is intended for Embot
     def is_for_embot?
-      @trigger.to_s == 'embot'
+      @trigger.to_s == 'bender'
     end
 
     # Determine if command is a certain string

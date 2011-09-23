@@ -9,16 +9,16 @@ require './lib/embot.rb'
 require 'tinder'
 
 # The campfire subdomain of your account (xxxx.campfirenow.com)
-CAMPFIRE_SUBDOMAIN = 'xxxx'
+CAMPFIRE_SUBDOMAIN = 'kiva'
 
 # API authentication token for Embot user
-CAMPFIRE_TOKEN     = 'e8b2afc5...'
+CAMPFIRE_TOKEN     = '9899999f6667887cedff1ab50ea7f8d6c73b9ff1'
 
 # Numerical ID of Embot user. Used to sort out messages from itself
 CAMPFIRE_USER_ID   = 1337
 
 # Name of the room that Embot should join
-CAMPFIRE_ROOM      = 'smalltalk'
+CAMPFIRE_ROOM      = 'ZombieChickens'
 
 begin
   Embot::log("Logging into account on subdomain: #{CAMPFIRE_SUBDOMAIN} with token: #{CAMPFIRE_TOKEN[0...6]}")
