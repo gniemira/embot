@@ -12,7 +12,7 @@ module Embot
       def process(message)
         if message.is_enter?
           return welcome_user(message)
-        elsif message.is_text_message? and message.matches_regex?(/^(hi|hey|hello|yo) embot/i)
+        elsif message.is_text_message? and message.matches_regex?(/^(hi|hey|hello|yo) bender/i)
           return greet_user(message)
         else
           return nil
