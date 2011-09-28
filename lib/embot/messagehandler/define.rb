@@ -29,11 +29,11 @@ module Embot
 
       def get_definition(query)
        page       = Nokogiri::HTML(open("http://www.google.com/search?hl=en&q=define:#{CGI::escape(query)}"))
-       definition = page.css("ul.std li").first
+       definition = page.css("div.s").first
 
        return nil if definition.nil?
 
-       definition.inner_html.gsub('<br>', ' - ').gsub(%r{</?[^>]+?>}, '')
+       definition.inner_html.gsub('<br>', ' - ').gsub(%r{</?[^>]+?>}, '').gsub('&nbsp;', ' ')
       end
     end
   end

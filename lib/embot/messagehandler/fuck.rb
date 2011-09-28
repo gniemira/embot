@@ -1,14 +1,16 @@
-require 'nokogiri'
-require 'open-uri'
-require 'cgi'
+#require 'nokogiri'
+#require 'open-uri'
+#require 'cgi'
 
 module Embot
   module MessageHandler
     class Fuck < Base
       def process(message)
-        return speak('potty mouth!') if message.body.include? 'fuck'
-        
-        nil
+        if message.body.include? 'fuck'
+          return speak('potty mouth!') 
+        else
+          return nil
+        end
       end
     end
   end
