@@ -6,7 +6,7 @@ module Embot
   module MessageHandler
     class Fuck < Base
       def process(message)
-        if message.body.include? 'fuck'
+        if message.body.include? ('fuck' || 'shit')
           return speak('potty mouth!') 
         else
           return nil
