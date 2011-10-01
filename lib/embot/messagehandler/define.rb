@@ -33,7 +33,7 @@ module Embot
 
        return nil if definition.nil?
 
-       definition.inner_html.gsub('<br>', ' - ').gsub(%r{</?[^>]+?>}, '').gsub('&nbsp;', ' ')
+       definition.inner_html.gsub('<br>', ' - ').gsub(%r{</?[^>]+?>}, '').gsub('&nbsp;', ' ').gsub('&raquo;', ' ')
       end
     end
   end
