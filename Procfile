@@ -1,1 +1,1 @@
-bender: bundle exec ruby embot.rb	
+bender: ruby embot.rb	
