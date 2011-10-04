@@ -21,7 +21,7 @@ module Embot
                     'how dare you',
                     'gasp!',
                     'potty mouth!',
-                    'you kiss your mother with that mout, #{message.user_firstname}?',
+                    'you kiss your mother with that mouth?',
                     'say what?'
           ]
         prudery.sample
