@@ -11,7 +11,8 @@ module Embot
     Embot::MessageHandler::Quote.new,
     Embot::MessageHandler::Greeter.new,
     Embot::MessageHandler::Fuck.new,
-    Embot::MessageHandler::Lol.new
+    Embot::MessageHandler::Lol.new,
+    Embot::MessageHandler::Bart.new
   ]
 
   # Process a chat message
