@@ -19,6 +19,8 @@ module Embot
           # pass the url through nokogiri
           doc = Nokogiri::XML(open(url))
           
+          stations = []
+          
           # use xpath to load up all the etd nodes
           doc.xpath("//etd").each do |node|
             # get the name of the destination
@@ -29,8 +31,12 @@ module Embot
             min = minutes.to_s.gsub('"', '').gsub('[', '').gsub(']', '')
             # print the results
             result = "there is a #{dest} train leaving in #{min}"
-            return speak(result)
+            stations << result
           end
+        
+          station_output = stations.join '| '
+          return speak(station_output)
+        
       end
     end
   end
