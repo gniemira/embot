@@ -13,6 +13,7 @@ module Embot
     Embot::MessageHandler::Fuck.new,
     Embot::MessageHandler::Lol.new,
     Embot::MessageHandler::Bart.new,
+    Embot::MessageHandler::Yourewelcome.new,
     Embot::MessageHandler::Rubric.new
   ]
 

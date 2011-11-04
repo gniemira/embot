@@ -20,6 +20,7 @@ module Embot
         name = rubric_list.sample + " " + rubric_list.sample
         return name
       end
+           
       end
     end
   end
