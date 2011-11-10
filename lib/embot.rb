@@ -14,6 +14,7 @@ module Embot
     Embot::MessageHandler::Lol.new,
     Embot::MessageHandler::Bart.new,
     Embot::MessageHandler::Yourewelcome.new,
+    Embot::MessageHandler::Yelp.new,
     Embot::MessageHandler::Rubric.new
   ]
 
