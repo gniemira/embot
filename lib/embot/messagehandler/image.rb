@@ -19,7 +19,8 @@ module Embot
         image_url = get_random_image_url(message.parameters)
 
         if image_url.nil?
-          return speak("Sorry, couldn't find any images for '#{payload}'")
+          return speak("Nope")
+          #return speak("Sorry, couldn't find any images for '#{payload}'")
         end
 
         speak(image_url)
@@ -29,7 +30,8 @@ module Embot
 
       def get_random_image_url(query)
         page  = Nokogiri::HTML(open("http://www.google.com/images?hl=en&q=#{CGI::escape(query)}"))
-        links = page.css("#ImgCont table td a")
+        #links = page.css("#ImgCont table td a")
+        links = page.css(".rg_li a")
         link  = links[rand(links.size)]
 
         return nil if link.nil?
