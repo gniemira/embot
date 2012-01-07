@@ -16,7 +16,7 @@ module Embot
       private
 
       def nameify  
-        rubric_list = %w(rocket laser	dinosaur	old people	tiger chicken	steel	crystal	engine	lady	baby	rhino	panda	apocalypse	zombie	ninja	harrison ford	space	underpants	future	robot	chocolate	shark	jet	gun	guitar solo	beard	sparkle	fire	monkey	cyber	fist	unicorn	mustache juice)
+        rubric_list = ["rocket", "laser",	"dinosaur",	"old people",	"tiger", "chicken",	"steel",	"crystal",	"engine",	"lady",	"baby",	"rhino",	"panda",	"apocalypse",	"zombie",	"ninja",	"harrison ford",	"space",	"underpants",	"future",	"robot",	"chocolate",	"shark",	"jet",	"gun",	"guitar solo",	"beard",	"sparkle",	"fire",	"monkey",	"cyber",	"fist",	"unicorn",	"mustache", "juice"]
         name = rubric_list.sample + " " + rubric_list.sample
         return name
       end
