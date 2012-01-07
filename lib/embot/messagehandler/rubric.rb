@@ -12,7 +12,9 @@ module Embot
       def nameify  
         rubric_list = ["rocket", "laser",	"dinosaur",	"old people",	"tiger", "chicken",	"steel",	"crystal",	"engine",	"lady",	"baby",	"rhino",	"panda",	"apocalypse",	"zombie",	"ninja",	"harrison ford",	"space",	"underpants",	"future",	"robot",	"chocolate",	"shark",	"jet",	"gun",	"guitar solo",	"beard",	"sparkle",	"fire",	"monkey",	"cyber",	"fist",	"unicorn",	"mustache", "juice", "winning", "charlie sheen", "rapture", "torture", "spasm", "bro", "manzierre", "lady gaga", "worm", "Premal's phone", "jedi", "toupee", "botox", "cheeseburger", "Coolio", "Tom Brady", "bone", "Poland", "George W. Bush", "satin", "butter", "muffin", "milkshake", "cream pie", "sword", "giant", "queen", "bear", "rainbow", "tornado", "lips", "carrot", "donut", "fraternity", "Salesforce", "trophy", "penguin", "Jon Kart", "shake weight", "snuggie", "Goulet"]
         name = rubric_list.sample + " " + rubric_list.sample
-        return name
+        phrase = ["The rubric is infallable", "Jumanji", "Your result", "Stop it"].sample
+        result = phrase + ": " + name
+        return result
       end
            
       end
