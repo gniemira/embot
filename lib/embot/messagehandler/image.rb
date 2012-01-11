@@ -15,32 +15,22 @@ module Embot
       def process(message)
         return nil if !message.is_for_embot? or !message.command_is?('image')
         return speak("Image of what?") if message.no_parameters?
-
         image_url = get_random_image_url(message.parameters)
-
         if image_url.nil?
-          return speak("Nope")
-          #return speak("Sorry, couldn't find any images for '#{payload}'")
+          return speak("When searching for '#{message.parameters}' I found a picture of your mom and it was too big to fit on the screen")
         end
-
         speak(image_url)
       end
 
       private
 
       def get_random_image_url(query)
-        page  = Nokogiri::HTML(open("http://www.google.com/images?hl=en&q=#{CGI::escape(query)}"))
-        #links = page.css("#ImgCont table td a")
-        links = page.css(".rg_li a")
-        link  = links[rand(links.size)]
-
-        return nil if link.nil?
-
-        extract_image_url(link['href'])
-      end
-
-      def extract_image_url(link)
-        link.split('&').first.gsub('/imgres?imgurl=', '')
+        query = query.gsub(/\s+/, "")
+        page = Nokogiri::HTML(open("http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=#{query}"))
+        result = JSON.parse(page)
+        r = result['responseData']['results'].first
+        return nil if r['url'].nil?
+        return r['url'].to_s
       end
     end
   end
