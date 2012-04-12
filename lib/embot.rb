@@ -15,7 +15,8 @@ module Embot
     Embot::MessageHandler::Bart.new,
     Embot::MessageHandler::Yourewelcome.new,
     Embot::MessageHandler::Yelp.new,
-    Embot::MessageHandler::Rubric.new
+    Embot::MessageHandler::Rubric.new,
+    Embot::MessageHandler::Twit.new
   ]
 
   # Process a chat message
