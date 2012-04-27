@@ -77,7 +77,8 @@ module Embot
                         "shake weight", 
                         "snuggie",
                         "bacon",
-                        "explosion"
+                        "explosion",
+                        "womb"
                       ]
         name = rubric_list.sample + " " + rubric_list.sample
         phrase = ["The rubric is infallible", "Jumanji", "Unggggh", "Stop it", "Sigh", "SHAZAM!"].sample
